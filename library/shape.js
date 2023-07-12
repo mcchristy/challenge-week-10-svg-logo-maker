@@ -8,7 +8,6 @@ class Shape {
     }
   
     render() {
-      // Override this method in child classes
       return '';
     }
   }
