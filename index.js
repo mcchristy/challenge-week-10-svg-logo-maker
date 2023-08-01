@@ -1,5 +1,5 @@
 const fs = require('fs');
-const inquirer = require('inquirer');
+const inquirer = await import('inquirer');
 const { Triangle, Circle, Square } = require('./lib/shapes');
 
 function writeSVGFile(filename, content) {
