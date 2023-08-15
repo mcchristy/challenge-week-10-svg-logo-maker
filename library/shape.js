@@ -4,23 +4,26 @@ class Shape {
       this.textColor = textColor;
       this.text = text;
   }
+  setColor(color) {
+    this.shapeColor = color;
+  }
 }
   
   class Circle extends Shape {
     generate() {
-      return `<circle cx="150" cy="100" r="50" fill="${this.color}" />`;
+      return `<circle cx="50%" cy="50%" r="100" height="100%" width="100%" fill="${this.shapeColor}" />`;
     }
   }
   
   class Triangle extends Shape {
     generate() {
-      return '<polygon points="150, 50 100, 150 200, 150" fill="${this.color}" />';
+      return `<polygon height="100%" width="100%" points="0,200 300,200 150,0" fill="${this.shapeColor}" />`;
     }
   }
   
   class Square extends Shape {
     generate() {
-      return '<rect x="100" y="50" width="100" height="100" fill="${this.color}" />';
+      return `<rect x="100" y="50" width="100" height="100" fill="${this.shapeColor}" />`;
     }
   }
   

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require("inquirer");
-const { Triangle, Circle, Square } = require('./lib/shape');
+const { Triangle, Circle, Square } = require('./library/shape');
 
 function writeSVGFile(filename, content) {
     fs.writeFile(filename, content, (err) => {
@@ -64,8 +64,8 @@ function writeSVGFile(filename, content) {
   
         const svgContent = `
   <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="${answers.textColor}">${answers.text}</text>
-    ${shape.render()}
+   ${shape.generate()}
+    <text x="150" y="125" font-size="60" text-anchor="middle" fill="${answers.textColor}">${answers.text}</text>
   </svg>`;
   
         writeSVGFile('logo.svg', svgContent);

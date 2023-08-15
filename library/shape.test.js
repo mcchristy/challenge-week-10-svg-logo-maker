@@ -4,7 +4,7 @@ describe('Shape classes', () => {
   test('Circle render method should return valid SVG', () => {
     const shape = new Circle();
     shape.setColor('blue');
-    expect(shape.render()).toEqual('<circle cx="150" cy="100" r="50" fill="blue" />');
+    expect(shape.render()).toEqual('<circle cx="50%" cy="50%" r="100" fill="blue" />');
   });
 
   test('Triangle render method should return valid SVG', () => {
